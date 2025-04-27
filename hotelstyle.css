@@ -1,65 +1,54 @@
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
 }
-
-/* Navbar */
-ul {
+ul{
     padding: 15px 5px;
+    margin: 0;
     overflow: hidden;
     list-style-type: none;
-    background-color: rgba(0, 0, 0, 0.83);
+    background-color:rgba(0, 0, 0, 0.83);
     border-bottom: 2px solid black;
     position: fixed;
     width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+   
+    
 }
-
-/* Nav items */
-li {
+li{
     float: right;
 }
-
-li a {
+li a{
     display: block;
     color: white;
     text-decoration: none;
     padding: 8px 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
-a:hover {
+    
+}
+a:hover{
+    
     border-radius: 50px;
-    color: rgb(93, 229, 229);
+    color:rgb(93, 229, 229);
+    
 }
-
-/* Active menu link */
-.active {
+.active{
     background-color: rgb(93, 229, 229);
     border-radius: 50px;
     color: black;
 }
-
-/* Logo section */
-.icon {
+.icon{
     float: left;
 }
-
-.icon img {
+.icon img{
     width: 35px;
     height: 35px;
     padding-left: 2px;
+   
 }
-
-.name {
-    float: left;
+.name{
+    float:left;
     align-items: center;
     color: white;
     padding-top: 13px;
@@ -68,46 +57,39 @@ a:hover {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 7px;
 }
-
-/* Page background */
-.background {
-    background-color: rgb(180, 180, 180);
+.background{
+   background-color: rgb(180, 180, 180);
 }
-
-/* Table Styles */
-table {
-    text-align: center;
-    padding-top: 80px; /* give space for fixed nav */
-    width: 100%;
-}
-
-table img {
+table img{
     height: 200px;
     width: 300px;
 }
-
-.center {
+table{
+   
+    text-align: center;
+    padding-top: 20px;
+}
+.center{
     margin-left: auto;
     margin-right: auto;
     padding-left: 10px;
     padding-top: 50px;
 }
-
-/* Table cell styling */
-.edit td {
+.edit td{
     width: 250px;
     padding: 10px;
     padding-bottom: 25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-.edit:hover {
-    background-color: rgb(162, 161, 161);
+.edit:hover{
+    background-color:rgb(162, 161, 161);
     border-radius: 7px;
+    
+    
 }
-
-/* Footer */
-footer {
+footer{
+    
+    bottom: 0;
     background-color: black;
     width: 100%;
     padding: 20px 0;
@@ -115,64 +97,71 @@ footer {
     color: white;
     opacity: 0.8;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 50px;
 }
+ 
+@media only screen and (max-width: 768px) {
+    .main {
+        background-size: cover;
+    }
 
-/* Mobile Devices */
-@media screen and (max-width: 600px) {
-    ul {
-        flex-direction: column;
-        padding: 10px 0;
-    }
-    li {
-        float: none;
-        width: 100%;
-        text-align: center;
-    }
-    li a {
-        padding: 12px;
-    }
-    .icon, .name {
-        float: none;
-        text-align: center;
-        padding-top: 5px;
-    }
-    .name {
-        padding-left: 0;
-        font-size: 18px;
-        letter-spacing: 3px;
-    }
-    table img {
-        width: 90%;
-        height: auto;
-    }
-    .edit td {
-        width: auto;
-        font-size: 14px;
-    }
-}
-
-/* Tablets (portrait and small screens) */
-@media screen and (min-width: 601px) and (max-width: 992px) {
     ul {
         padding: 10px;
     }
+
+    li {
+        float: none;
+        text-align: center;
+    }
+
     li a {
-        padding: 10px 20px;
+        padding: 8px 20px;
     }
+
+    .content {
+        font-size: 50px;
+        padding-top: 150px;
+        padding-left: 20px;
+    }
+
+    .content2 {
+        padding-left: 20px;
+    }
+
     .name {
-        padding-top: 10px;
+        padding-left: 10px;
+        font-size: 14px;
     }
-    table img {
-        width: 80%;
-        height: auto;
+
+    footer {
+        padding: 15px 0;
     }
 }
 
-/* Larger Devices (desktops/laptops) */
-@media screen and (min-width: 993px) {
-    .center {
-        padding-left: 50px;
-        padding-right: 50px;
+@media only screen and (max-width: 480px) {
+    .content {
+        font-size: 40px;
+        padding-top: 100px;
+        padding-left: 10px;
+    }
+
+    .content2 {
+        padding-left: 10px;
+    }
+
+    .name {
+        font-size: 12px;
+    }
+
+    .icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    li a {
+        padding: 8px 15px;
     }
 }
