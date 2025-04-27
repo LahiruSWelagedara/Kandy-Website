@@ -1,81 +1,91 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
 }
-ul{
+
+ul {
     padding: 15px 5px;
-    margin: 0;
-    overflow: hidden;
     list-style-type: none;
-    background-color:rgba(0, 0, 0, 0.83);
+    background-color: rgba(0, 0, 0, 0.83);
     border-bottom: 2px solid black;
     position: fixed;
     width: 100%;
-   
-    
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
 }
-li{
+
+li {
     float: right;
 }
-li a{
+
+li a {
     display: block;
     color: white;
     text-decoration: none;
     padding: 8px 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-    
-}
-a:hover{
-    
+a:hover {
     border-radius: 50px;
-    color:rgb(93, 229, 229);
-    
+    color: rgb(93, 229, 229);
 }
-.active{
+
+.active {
     background-color: rgb(93, 229, 229);
     border-radius: 50px;
     color: black;
 }
-.icon{
+
+.icon {
     float: left;
 }
-.icon img{
+
+.icon img {
     width: 35px;
     height: 35px;
     padding-left: 2px;
-   
 }
-.name{
-    float:left;
-    align-items: center;
+
+.name {
+    float: left;
     color: white;
     padding-top: 13px;
     padding-left: 20px;
-    padding-right: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 7px;
 }
-.background{
+
+.background {
     background-color: rgb(180, 180, 180);
+    padding-top: 80px; /* Extra padding to avoid hiding behind navbar */
+    min-height: 100vh; /* Ensure background stretches full screen */
 }
-table img{
-    height: 300px;
-    width: 350px;
-}
-table{
-    padding-top: 100px;
+
+table {
     width: 100%;
+    padding-top: 100px;
+    border-collapse: collapse;
 }
-table td{
+
+table td {
     text-align: center;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
-footer{
-    
-    bottom: 0;
+
+table img {
+    height: auto;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+footer {
     background-color: black;
     width: 100%;
     padding: 20px 0;
@@ -84,18 +94,19 @@ footer{
     opacity: 0.8;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-td:hover{
+
+td:hover {
     background-color: rgb(162, 161, 161);
     border-radius: 7px;
+    transition: background-color 0.3s;
 }
-
 
 /* Mobile devices (phones) */
 @media screen and (max-width: 600px) {
     ul {
-        display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 10px 0;
     }
     li {
         float: none;
@@ -109,6 +120,14 @@ td:hover{
         float: none;
         text-align: center;
         padding-top: 5px;
+    }
+    .name {
+        padding-left: 0;
+        letter-spacing: 3px;
+        font-size: 16px;
+    }
+    table {
+        padding-top: 80px;
     }
     table img {
         width: 90%;
@@ -126,6 +145,9 @@ td:hover{
     }
     .name {
         padding-top: 10px;
+    }
+    table {
+        padding-top: 90px;
     }
     table img {
         width: 80%;
